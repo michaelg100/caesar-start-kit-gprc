@@ -70,3 +70,11 @@ extraHandler = append(extraHandler, caesar.ExtraHandler{
 })
 router.CustomHandlers = extraHandler
 ```
+
+Test your service:
+
+```bash
+buf curl \
+  --schema . \
+  http://localhost:3000/weather.WeatherService/GetWeather
+```
